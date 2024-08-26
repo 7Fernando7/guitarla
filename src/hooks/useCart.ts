@@ -1,16 +1,18 @@
 import { useState, useEffect, useMemo } from "react"
 import {db} from "../data/db"
 
+import type { cartItem } from '../types'
+
 export const useCart = () => {
 
-    const initialState =  () => {
+    const initialCart =  () : cartItem[] => {
         const localStorageCart = localStorage.getItem('cart')
         return localStorageCart ? JSON.parse(localStorageCart) : []
 
     }
   
     const [data] = useState(db)
-    const [cart, setCart] = useState(initialState)
+    const [cart, setCart] = useState(initialCart)
 
     const MAX_ITEMS = 5
     const MIN_ITEMS = 1
