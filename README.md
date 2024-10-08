@@ -48,3 +48,6 @@ export default tseslint.config({
   },
 })
 ```
+"# guitalar-ts-useReducer" 
+"# guitalar-ts-useReducer" 
+"# guitalar-ts-useReducer" 
